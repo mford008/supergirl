@@ -1,0 +1,8 @@
+body {
+  background-image: url("../images/pinkbricks.jpg");
+  /*background-color: black;*/
+}
+.nav {
+    width: 90%;
+    float: right;
+ }
