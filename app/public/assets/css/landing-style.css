@@ -1,0 +1,41 @@
+/* color scheme:
+background:
+  landing page: #333333
+  other pages: pink brick or #FFDAD8
+Main header:
+    landing: #F76F9A
+    Other: #FFFFFF
+Navbar/Footer:
+      background: #333333
+      Text: #FFFFFF
+      little touches: #55DDEO/#55DDE0
+*/
+html {
+  background-color: #333333;
+}
+.main {
+  background-color: #333333;
+  font-family: 'PT Sans', sans-serif;
+}
+h1 {
+  color: #F76F9A;
+  font-size: 350px;
+}
+h2, h3 {
+  color: #FFFFFF;
+  font-family: 'Slabo 27px', serif;
+}
+h3 {
+  font-size: 16px;
+  text-align: center;
+}
+.fas {
+  font-size: 3em;
+  color: #FFDAD8;
+  padding: 20px;
+}
+.nav-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
