@@ -1,6 +1,6 @@
-# supergirl
+# Personal Site 2.0
 
-colors:
+##color scheme:
 slate: #333333
 bright pink: #F76F9A
 pale pink: #FFDAD8
