@@ -11,29 +11,29 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
   </head>
   <body>
-    <div class="row">
-      <div class="col-12">
-        <header>
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link brand" href="/">Maddy Ford</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/portfolio">My Work</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/blog">Blog</a>
-            </li>
-          </ul>
-        </header>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="/">Maddy Ford</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/about">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/portfolio">My Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
     <div class="container">
       <div class="row">
         <div class="col">
@@ -41,12 +41,12 @@
         </div>
       </div>
       <div class="row first-row">
-        <div class="col">
+        <div class="col-s-12 col-m-6 col-lg-6">
           <div class="row">
-            <div class="col-s-6 col-m-3 col-lg-3">
+            <div class="col"> <!--col-s-6 col-m-3 col-lg-3-->
               <img class="img-fluid img-portfolio" src="/assets/images/gottago.jpg" alt="Gotta Go Logo">
             </div>
-            <div class="col-s-6 col-m-3 col-lg-3">
+            <div class="col">
               <div class="caption">
                 <h3>Gotta Go</h3>
                 <p class="portfolio-description">
@@ -64,12 +64,12 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col-s-12 col-m-6 col-lg-6">
           <div class="row">
-            <div class="col-s-6 col-m-3 col-lg-3">
+            <div class="col">
               <img class="img-fluid img-portfolio" src="/assets/images/friendfinder.jpg" alt="Friend Finder Logo">
             </div>
-            <div class="col-s-6 col-m-3 col-lg-3">
+            <div class="col">
               <div class="caption">
                 <h3>Friend Finder</h3>
                 <p class="portfolio-description">
@@ -101,5 +101,10 @@
         </div>
       </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  </body>
+
   </body>
 </html>
