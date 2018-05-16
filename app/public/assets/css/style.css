@@ -1,8 +1,123 @@
 body {
   background-image: url("../images/pinkbricks.jpg");
-  /*background-color: black;*/
+}
+.container {
+  width: 100%;
+  margin-bottom: 70px;
 }
 .nav {
-    width: 90%;
-    float: right;
- }
+  color: #FFDAD8;
+  background-color: #333333;
+}
+.navbar-brand {
+  color: #F76F9A;
+  font-family: 'PT Sans', sans-serif;
+  background-color: #333333;
+}
+.brand {
+  color: #F76F9A;
+}
+a {
+  color: #FFDAD8;
+  font-family: 'PT Sans', sans-serif;
+  background-color: #333333;
+}
+h1 {
+  color: #333333;
+  font-weight: bold;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 80px;
+  text-align: center;
+}
+h2, .form-control {
+  color: #333333;
+  /*font-family: 'Slabo 27px', serif;*/
+  font-size: 20px;
+  text-align: center;
+}
+h1, h2, h3 {
+  font-family: 'PT Sans', sans-serif;
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+}
+h3 {
+  font-size: 16px;
+  padding: 5px;
+}
+p {
+  font-family: 'Slabo 27px', serif;
+  color: #333333;
+  font-size: 16px;
+}
+img.biopic, .biopara {
+  max-height: 300px;
+}
+img.biopic {
+  border: 5px solid #333333;
+  padding: 10px;
+}
+.biopic-container, .greeting, .bio-para-container {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.img-portfolio {
+  border-radius: 50%;
+  padding: 5px;
+}
+.first-row {
+  padding: 5px;
+}
+label {
+  color: #333333;
+  font-family: 'PT Sans', sans-serif;
+}
+.portfolio-description {
+  font-size: 14px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fab {
+  font-size: 3em;
+  color: #333333;
+  padding: 0;
+}
+.buttons {
+  color: #333333;
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  margin: 5px;
+}
+.icon-section {
+  display: flex;
+  justify-content: space-around;
+}
+.publications-section {
+  text-align: center;
+  margin-top: 20px;
+}
+.footer, .copyright {
+  font-size: 16px;
+  text-align: center;
+  background-color: #333333;
+  color: #FFDAD8;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background-color: #333333;
+}
+.copyright-l1 {
+  color: #F76F9A;
+}

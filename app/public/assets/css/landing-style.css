@@ -15,11 +15,11 @@ html {
 }
 .main {
   background-color: #333333;
-  font-family: 'PT Sans', sans-serif;
 }
 h1 {
   color: #F76F9A;
   font-size: 350px;
+  font-family: 'PT Sans', sans-serif;
 }
 h2, h3 {
   color: #FFFFFF;
