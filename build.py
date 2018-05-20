@@ -13,11 +13,11 @@ open('docs/about.html', 'w+').write(about_html)
 
 content = open('content/blog.html').read()
 blog_html = top_template + content + bottom_template
-open('docs/about.html', 'w+').write(about_html)
+open('docs/blog.html', 'w+').write(blog_html)
 
 content = open('content/contact.html').read()
 contact_html = top_template + content + bottom_template
-open('docs/about.html', 'w+').write(contact_html)
+open('docs/contact.html', 'w+').write(contact_html)
 
 content = open('content/portfolio.html').read()
 portfolio_html = top_template + content + bottom_template
