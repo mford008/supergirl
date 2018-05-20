@@ -6,88 +6,61 @@ body {
   width: 100%;
   margin-bottom: 70px;
 }
-nav {
-  color: #FFDAD8;
-  background-color: #333333;
-}
-
-.navbar-brand {
-  color: #F76F9A;
-  /*font-family: 'Oswald', sans-serif;*/
-  font-family: 'Lato', sans-serif;
-  background-color: #333333;
-}
-
-.brand {
-  color: #F76F9A;
-}
-a {
-  color: #FFDAD8;
-  /*font-family: 'Oswald', sans-serif;*/
-  font-family: 'Lato', sans-serif;
-  background-color: #333333;
-}
-h1 {
-  /*color: #333333;*/
-  color: #FFDAD8;
-  font-weight: bold;
-  /*font-family: 'Oswald', sans-serif;*/
-  font-family: 'Lato', sans-serif;
-  font-size: 80px;
-  text-align: center;
-}
-h2, .form-control {
-  color: #333333;
-  font-size: 20px;
-}
 h1, h2, h3 {
-  /*font-family: 'Oswald', sans-serif;*/
-  /*font-family: 'Lato', sans-serif;*/
-  /*font-family: 'Fjalla One', sans-serif;*/
   font-family: 'Hind', sans-serif;
-  /*color: #333333;*/
-  color: #FFDAD8;
   font-weight: bold;
   text-align: center;
   padding: 5px;
 }
 h1 {
-  color:#F76F9A;
+  color: #F76F9A;
+  font-size: 80px;
 }
-.blog-post-title {
-  text-align: left;
+h2 {
+  color: #F76F9A;
+  font-size: 20px;
 }
 h3 {
+  color: #FFDAD8;
   font-size: 16px;
 }
 p {
   font-family: 'Slabo 27px', serif;
-  /*color: #333333;*/
   color: #FFDAD8;
   font-size: 16px;
+}
+nav {
+  color: #FFDAD8;
+  background-color: #333333;
+  font-family: 'Hind', sans-serif;
+}
+.navbar-brand {
+  color: #F76F9A;
+  font-family: 'Hind', sans-serif;
+}
+a {
+  color: #FFDAD8;
+  /*font-family: 'Oswald', sans-serif;*/
+  /*font-family: 'Lato', sans-serif;*/
+  /*background-color: #333333;*/
+}
+.blog-post-title {
+  text-align: left;
 }
 img.biopic, .biopara {
   max-height: 300px;
 }
-/*img.biopic {
-  border: 5px solid #333333;
-  padding: 10px;
-}*/
 .biopic-container, .greeting, .bio-para-container {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.img-portfolio {
-  border-radius: 50%;
-  padding: 5px;
-}
+
 .first-row {
   padding: 5px;
 }
 label {
   color: #333333;
-  /*font-family: 'Oswald', sans-serif;*/
   font-family: 'Lato', sans-serif;
 }
 .portfolio-description {
