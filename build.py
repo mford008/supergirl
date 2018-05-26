@@ -3,15 +3,15 @@ def main():
     pages = [
         {
         'filename': 'content/about.html',
-        'title': 'about',
+        'output_filename': 'docs/about.html',
         },
         {
         'filename': 'content/blog.html',
-        'title': 'blog',
+        'output_filename': 'docs/blog.html',
         },
         {
         'filename': 'content/contact.html',
-        'title': 'contact',
+        'output_filename': 'docs/contact.html',
         },
         # {
         # 'filename': 'content/index.html',
@@ -19,7 +19,7 @@ def main():
         # },
         {
         'filename': 'content/portfolio.html',
-        'title': 'portfolio',
+        'output_filename': 'docs/portfolio.html',
         }
     ]
 
@@ -40,7 +40,7 @@ def main():
         # print(x['filename'])
         # print(x['title'])
         newpage = top_template + content + bottom_template
-        open("docs/{x['title']}.html", 'w+').write(newpage)
+        open("x[output_filename]", 'w+').write(newpage)
     # top_template = open('templates/top.html').read()
     # bottom_template = open('templates/bottom.html').read()
     # content = open('content/about.html').read()
