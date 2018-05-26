@@ -11,10 +11,10 @@ pages = [
     'filename': 'content/contact.html',
     'title': 'Contact',
     },
-    {
-    'filename': 'content/index.html',
-    'title': 'Index',
-    },
+    # {
+    # 'filename': 'content/index.html',
+    # 'title': 'Index',
+    # },
     {
     'filename': 'content/portfolio.html',
     'title': 'Portfolio',
@@ -25,7 +25,7 @@ def main():
     bottom_template = open('templates/bottom.html').read()
     content = open('content/index.html').read()
 
-    index_html = top_template_landing + content + bottom_template
+    index_html = top_template_landing + content
     open('docs/index.html', 'w+').write(index_html)
 
     top_template = open('templates/top.html').read()
