@@ -41,12 +41,8 @@ nav {
 a {
   color: #FFDAD8;
 }
-
-
-.blog-post-title {
-  text-align: left;
-}
-img.biopic, .biopara {
+/*About Section*/
+img.biopic {
   max-height: 300px;
 }
 .biopic-container, .greeting, .bio-para-container {
@@ -54,42 +50,61 @@ img.biopic, .biopara {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.fa-bars {
+  color: #FFDAD8;
+}
+/*Portfolio*/
 .first-row {
   padding: 5px;
 }
+.portfolio-description {
+  font-size: 14px;
+}
+/*Contact*/
 label {
   color: #FFDAD8;
   font-family: 'Hind', sans-serif;
-}
-.portfolio-description {
-  font-size: 14px;
 }
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+  /*font awesome icons - only on contact page*/
 .fab {
   font-size: 3em;
-  color: #333333;
+  color: #FFDAD8;
   padding: 0;
 }
 .buttons {
-  color: #333333;
   display: flex;
   justify-content: center;
 }
+/*Contact and Portfolio*/
 .btn {
+  color: #FFDAD8;
+  background-color: #333333;
+  border-color: #FFDAD8;
   margin: 5px;
 }
+/*Contact*/
 .icon-section {
   display: flex;
   justify-content: space-around;
+}
+a.linkedin, a.twitter, a.github {
+  background-color: #f8f9fa;
+
 }
 .publications-section {
   text-align: center;
   margin-top: 20px;
 }
+/*Blog*/
+.blog-post-title {
+  text-align: left;
+}
+/*Footer*/
 .footer, .copyright {
   font-size: 16px;
   text-align: center;
@@ -108,8 +123,4 @@ form {
 }
 .copyright-l1 {
   color: #F76F9A;
-}
-
-.fa-bars {
-  color: #FFDAD8;
 }
