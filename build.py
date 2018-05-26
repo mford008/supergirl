@@ -13,10 +13,6 @@ def main():
         'filename': 'content/contact.html',
         'output_filename': 'docs/contact.html',
         },
-        # {
-        # 'filename': 'content/index.html',
-        # 'title': 'Index',
-        # },
         {
         'filename': 'content/portfolio.html',
         'output_filename': 'docs/portfolio.html',
@@ -41,6 +37,7 @@ def main():
         # print(x['title'])
         newpage = top_template + content + bottom_template
         open("x[output_filename]", 'w+').write(newpage)
+        print('success!')
     # top_template = open('templates/top.html').read()
     # bottom_template = open('templates/bottom.html').read()
     # content = open('content/about.html').read()
