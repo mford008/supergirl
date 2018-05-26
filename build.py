@@ -4,20 +4,20 @@ pages = [
     'title': 'About Me',
     },
     {
-    'filename': 'content/blog.html'
-    'title': 'Blog'
+    'filename': 'content/blog.html',
+    'title': 'Blog',
     },
     {
-    'filename': 'content/contact.html'
-    'title': 'Contact'
+    'filename': 'content/contact.html',
+    'title': 'Contact',
     },
     {
-    'filename': 'content/index.html'
-    'title': 'Index'
+    'filename': 'content/index.html',
+    'title': 'Index',
     },
     {
-    'filename': 'content/portfolio.html'
-    'title': 'Portfolio'
+    'filename': 'content/portfolio.html',
+    'title': 'Portfolio',
     }
 ]
 def main():
