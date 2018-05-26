@@ -1,3 +1,4 @@
+def main():
 top_template_landing = open('templates/top-landing.html').read()
 bottom_template = open('templates/bottom.html').read()
 content = open('content/index.html').read()
@@ -22,3 +23,6 @@ open('docs/contact.html', 'w+').write(contact_html)
 content = open('content/portfolio.html').read()
 portfolio_html = top_template + content + bottom_template
 open('docs/portfolio.html', 'w+').write(portfolio_html)
+
+if __name__ = __'main'__:
+    main()
