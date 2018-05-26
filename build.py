@@ -1,3 +1,25 @@
+pages = [
+    {
+    'filename': 'content/about.html',
+    'title': 'About Me',
+    },
+    {
+    'filename': 'content/blog.html'
+    'title': 'Blog'
+    },
+    {
+    'filename': 'content/contact.html'
+    'title': 'Contact'
+    },
+    {
+    'filename': 'content/index.html'
+    'title': 'Index'
+    },
+    {
+    'filename': 'content/portfolio.html'
+    'title': 'Portfolio'
+    }
+]
 def main():
     top_template_landing = open('templates/top-landing.html').read()
     bottom_template = open('templates/bottom.html').read()
