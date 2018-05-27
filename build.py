@@ -20,12 +20,11 @@ def main():
     ]
 
 
-# Leave this code alone and out of for loop for now
-    # top_template_landing = open('templates/top-landing.html').read()
-    # bottom_template_landing = open('templates/bottom-landing.html').read()
-    # content = open('content/index.html').read()
-    # index_html = top_template_landing + content + bottom_template_landing
-    # open('docs/index.html', 'w+').write(index_html)
+    top_template_landing = open('templates/top-landing.html').read()
+    bottom_template_landing = open('templates/bottom-landing.html').read()
+    content = open('content/index.html').read()
+    index_html = top_template_landing + content + bottom_template_landing
+    open('docs/index.html', 'w+').write(index_html)
 
     for x in pages:
         top_template = open('templates/top.html').read() #still need to establish top and bottom templates
