@@ -31,30 +31,9 @@ def main():
         top_template = open('templates/top.html').read() #still need to establish top and bottom templates
         bottom_template = open('templates/bottom.html').read()
         content = open(x['filename']).read()
-        # {title}_html = top_template + {filename} + bottom_template #use title and filename from pages list
-        # open('docs/{title}.html', 'w+').write({title}_html) #need a write command for docs
-        # print(x['filename'])
-        # print(x['title'])
         newpage = top_template + content + bottom_template
-        open("x[output_filename]", 'w+').write(newpage)
+        open(x['output_filename'], 'w+').write(newpage)
         print('success!')
-    # top_template = open('templates/top.html').read()
-    # bottom_template = open('templates/bottom.html').read()
-    # content = open('content/about.html').read()
-    # about_html = top_template + content + bottom_template
-    # open('docs/about.html', 'w+').write(about_html)
-    #
-    # content = open('content/blog.html').read()
-    # blog_html = top_template + content + bottom_template
-    # open('docs/blog.html', 'w+').write(blog_html)
-    #
-    # content = open('content/contact.html').read()
-    # contact_html = top_template + content + bottom_template
-    # open('docs/contact.html', 'w+').write(contact_html)
-    #
-    # content = open('content/portfolio.html').read()
-    # portfolio_html = top_template + content + bottom_template
-    # open('docs/portfolio.html', 'w+').write(portfolio_html)
 
 if __name__ == '__main__':
     main()
