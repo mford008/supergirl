@@ -41,6 +41,13 @@ nav {
 a {
   color: #FFDAD8;
 }
+a:hover {
+  color: #F76F9A;
+}
+a:active {
+  color: #F76F9A;
+  background-color: #FFDAD8;
+}
 /*About Section*/
 img.biopic {
   max-height: 300px;
