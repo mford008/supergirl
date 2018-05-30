@@ -12,6 +12,6 @@ blue: #55DDEO/#55DDE0
 
 questions on homework:
 1. what are the other two functions for?
-2. why do we need main function?
+2. why do we need main function? build file will still run items if func not present...
 3. Is the CSS option ok for the purpose of this assignment?
    How would the templating approach work?
