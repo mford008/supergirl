@@ -12,7 +12,8 @@ pages = [
     'headline': 'Working Title',
     'brand': '<a class="navbar-brand" href="index.html">Maddy Ford</a>',
     'filename': 'content/blog.html',
-    'output_filename': 'docs/blog.html',
+    #changing output so it goes into temp folder so final can be grabbed and put in docs
+    'output_filename': 'blog_temp/blog.html',
     'active_class': 'blog_active',
     },
     {
@@ -43,19 +44,22 @@ pages = [
 
 blog_posts = [
     {
-    'blog_post_title': 'Test1',
+    'blog_post_title': 'test_one',
+    'tuna': 'Title 1',
     'blog_post_text': 'blog_posts/1.html',
     'blog_post_output_filepath': 'docs/blog_post_1',
     'blog_post_date': 'May 26, 2018',
     },
     {
-    'blog_post_title': 'Test2',
+    'blog_post_title': 'test_two',
+    'tuna': 'Title 2',
     'blog_post_text': 'blog_posts/2.html',
     'blog_post_output_filepath': 'docs/blog_post_2',
     'blog_post_date': 'May 27, 2018',
     },
     {
-    'blog_post_title': 'Test3',
+    'blog_post_title': 'test_three',
+    'tuna': 'Title 3',
     'blog_post_text': 'blog_posts/3.html',
     'blog_post_output_filepath': 'docs/blog_post_3',
     'blog_post_date': 'May 28, 2018',
@@ -63,7 +67,7 @@ blog_posts = [
 ]
 
 def main():
-
+#for all pages but landing
     for x in pages:
         template = open('templates/base.html').read()
         content = open(x['filename']).read()
@@ -73,7 +77,7 @@ def main():
             open(x['output_filename'], 'w+').write(finished_page)
         templating()
 
-#the below function is just for the landing page
+#below function is just for landing page
     def landing():
         template = open('templates/base-landing.html').read()
         content = open('content/index.html').read()
@@ -81,19 +85,28 @@ def main():
         open('docs/index.html', 'w+').write(finished_landing_page)
 
     landing()
+
+    def blog_main(): #this function will take care of adding each post's link, title, and date to the main page
+        for x in blog_posts:
+            # into docs/blog, inject titles and dates for each Post
+            blog_template = open('blog_temp/blog.html').read() #does there need to be an intermediate step?
+            finished_blog_page = blog_template.replace('{{'+ x['blog_post_title'] + '}}', x['tuna'])
+            open('docs/blog.html', 'w+').write(finished_blog_page)
+    blog_main()
+
+    # def blog_post(): #this function will add text, title, date to the individual post page
+        # for x in blog_posts:
+            # into docs/blog_post.html, inject title, text, and date for each post
+        # for x in blog_posts:
+        #     blog_template = open('docs/blog.html').read()
+        #     finished_blog_page = blog_template.replace('{{'+ x['blog_post_title'] + '}}', x['tuna'])
+        #     # '{{blog_post_title}}', x['blog_post_title']).replace('{{blog_post_output_filepath}}', x['blog_post_output_filepath']).replace('{{blog_post_date}}', x['blog_post_date'])
+        #     open(x['blog_post_output_filepath'], 'w+').write(finished_blog_page)
+
+            # blog_post_template = open('docs/blog_post.html').read()
+            # blog_content = open(x['blog_post_text']).read()
+            # finished_blog_post = blog_post_template.replace('{{blog_post_title}}', x['blog_post_title']).replace('{{blog_post_date}}', x['blog_post_date']).replace('{{blog_post_text}}', x['blog_post_text'])
+            # open(x['blog_post_output_filepath'], 'w+').write(finished_blog_post)
+
 if __name__ == '__main__': #why is this function needed, and why is this the way it's being called? Because you don't want it being called anytime you run file
     main()
-
-# still in testing phase - needs to also go in main function
-# def blog():
-#     for x in blog_posts:
-#         #update blog page
-#         blog_template = open('docs/blog.html').read()
-#         finished_blog_page = blog_template.replace('{{blog_post_title}}', x['blog_post_title']).replace('{{blog_post_output_filepath}}', x['blog_post_output_filepath']).replace('{{blog_post_date}}', x['blog_post-date'])
-#         open(x['blog_post_output_filepath'], 'w+').write(finished_blog_page)
-#         #update individual blog post page
-#         blog_post_template = open('docs/blog_post.html').read()
-#         blog_content = open(x['blog_post_text']).read()
-#         finished_blog_post = blog_post_template.replace('{{blog_post_title}}', x['blog_post_title']).replace('{{blog_post_date}}', x['blog_post-date']).replace('{{blog_post_text}}', x['blog_post_text'])
-#         open(x['blog_post_output_filepath'], 'w+').write(finished_blog_post)
-#
