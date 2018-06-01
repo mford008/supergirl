@@ -13,7 +13,8 @@ pages = [
     'brand': '<a class="navbar-brand" href="index.html">Maddy Ford</a>',
     'filename': 'content/blog.html',
     #changing output so it goes into temp folder so final can be grabbed and put in docs
-    'output_filename': 'blog_temp/blog.html',
+    # 'output_filename': 'blog_temp/blog.html',
+    'output_filename': 'docs/blog.html',
     'active_class': 'blog_active',
     },
     {
