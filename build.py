@@ -22,11 +22,13 @@ def main():
     #using list
     for page in site['pages']:
         template(['filename']) #what needs to go in place of filename?
+        # convert(???)
         open(site['pages']['filepath'], 'w+').write(site['pages']['templated_content'])
     for page in landing_file:
         file_name = os.path.basename(page)
         name_only, extension = os.path.splitext(file_name)
         collect_landing(page, file_name, name_only)
+        # convert(???)
         template_landing(page)
         open(landing['pages']['filepath'], 'w+').write(landing['pages']['templated_content'])
 
@@ -66,7 +68,8 @@ def template_landing(page):
 
 if __name__ == '__main__':
     main()
-
+#converting markdown
+def convert(page):
 for page in pages:
     md = markdown.Markdown(extensions = 'markdown.extensions.meta')
     data = page
