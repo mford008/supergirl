@@ -21,7 +21,7 @@ def main():
         collect(page, file_name, name_only)
     #using list
     for page in site['pages']:
-        template(['filename']) #what needs to go in place of filename?
+        template(site['pages']['filename']) #what needs to go in place of filename?
         # convert(???)
         open(site['pages']['filepath'], 'w+').write(site['pages']['templated_content'])
     for page in landing_file:
@@ -38,6 +38,7 @@ def collect(page, file_name, name_only):
         'filepath': 'docs/'+str(file_name),
         'title': 'Maddy Ford - ' + name_only,
     })
+    print(['filename'])
 def collect_landing(page, file_name, name_only):
     landing['pages'] = {
         'filename': str(page),
@@ -46,7 +47,7 @@ def collect_landing(page, file_name, name_only):
     }
 
 def template(page):
-    content_html = open(['filename']).read() #what needs to go in place of filename?
+    content_html = open(site['pages']['filename']).read() #what needs to go in place of filename?
     template_html = open(site['base']).read()
     template = Template(template_html)
     finished_page = template.render(
@@ -69,10 +70,10 @@ def template_landing(page):
 if __name__ == '__main__':
     main()
 #converting markdown
-def convert(page):
-for page in pages:
-    md = markdown.Markdown(extensions = 'markdown.extensions.meta')
-    data = page
-    html = md.convert(data)
-    title = md.Meta['title']
-    author = md.Meta['author']
+# def convert(page):
+#     for page in pages:
+#         md = markdown.Markdown(extensions = 'markdown.extensions.meta')
+#         data = page
+#         html = md.convert(data)
+#         title = md.Meta['title']
+#         author = md.Meta['author']
