@@ -1,7 +1,10 @@
+title: Blog Post
+author: Maddy Ford
+data = '''
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>{{headline}}</h1>
+      <h1>Thought Collector</h1>
     </div>
   </div>
   <div class="row">
@@ -15,3 +18,4 @@
     </div>
   </div>
 </div>
+'''
