@@ -1,6 +1,7 @@
 import glob
 import os
 from jinja2 import Template
+import markdown
 
 site = {
     'base': 'templates/base.html',
@@ -20,9 +21,7 @@ def main():
         collect(page, file_name, name_only)
     #using list
     for page in site['pages']:
-        template(page)
-        # print(name_only)
-        # nav_active(name_only)
+        template(['filename']) #what needs to go in place of filename?
         open(site['pages']['filepath'], 'w+').write(site['pages']['templated_content'])
     for page in landing_file:
         file_name = os.path.basename(page)
@@ -45,7 +44,7 @@ def collect_landing(page, file_name, name_only):
     }
 
 def template(page):
-    content_html = open(site['pages']).read()
+    content_html = open(['filename']).read() #what needs to go in place of filename?
     template_html = open(site['base']).read()
     template = Template(template_html)
     finished_page = template.render(
@@ -67,3 +66,10 @@ def template_landing(page):
 
 if __name__ == '__main__':
     main()
+
+for page in pages:
+    md = markdown.Markdown(extensions = 'markdown.extensions.meta')
+    data = page
+    html = md.convert(data)
+    title = md.Meta['title']
+    author = md.Meta['author']

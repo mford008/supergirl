@@ -1,3 +1,6 @@
+title: About Me
+author: Maddy Ford
+data = '''
     <div class="container">
     <div class="row">
       <div class="col-xs-12 col-s-12 col-m-6 col-lg-6 greeting">
@@ -19,3 +22,4 @@
       </div>
     </div>
   </div>
+'''  
