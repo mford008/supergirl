@@ -1,6 +1,3 @@
-title: Blog
-author: Maddy Ford
-data = '''
 <div class="container">
   <div class="row">
     <div class="col">
@@ -24,4 +21,3 @@ data = '''
     </div>
   </div>
 </div>
-'''

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
   <head>
-    <title>{{ title|title|replace('_', ' ') }}</title>
+    <title>Maddy Ford - About</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="./assets/images/supergirl-heart-32x32.png" sizes="32x32" />
@@ -20,17 +20,34 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto" id="navigation">
-            {% for page in pages %}
-              <li class="active">
-                <a href="{{ output_filepath }}">{{ title|title }}</a>
-              </li>
-            {% endfor %}
+            
             </ul>
       </div>
     </nav>
-    {% block content %}
-      {{ content }}
-    {% endblock content %}
+    
+      <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-s-12 col-m-6 col-lg-6 greeting">
+      <h1>Hey, Hi, and Hello!</h1>
+    </div>
+    <div class="col-xs-8 col-s-8 col-m-4 col-lg-4 biopic-container">
+      <img class="img-fluid biopic" src="assets/images/biopic.jpg" alt="Maddy Ford Picture">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col bio-para-container">
+      <p>I am a full stack web developer based in Berkeley, California.
+         I am passionate about designing, developing, and testing high-quality
+         applications that facilitate efficiency in day-to-day processes. My
+         background in biology and nonprofit administration has infused my coding
+         style with a love for logic and user-focused design. I am relentlessly
+         compassionate and take great joy in collaborating with others on ambitious
+         full stack projects.</p>
+    </div>
+  </div>
+</div>
+
+    
     <div class="row">
       <div class="col">
         <div class="row">
