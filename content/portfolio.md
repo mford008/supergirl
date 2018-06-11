@@ -1,6 +1,3 @@
-title: Portfolio
-author: Maddy Ford
-data = '''
 <div class="container">
   <div class="row">
     <div class="col">
@@ -55,4 +52,3 @@ data = '''
     </div>
   </div> <!--row 1-->
 </div> <!--container-->
-'''

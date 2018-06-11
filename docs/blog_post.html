@@ -1,6 +1,6 @@
 <!DOCTYPE html>
   <head>
-    <title>{{ title|title|replace('_', ' ') }}</title>
+    <title>Maddy Ford - Blog post</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="./assets/images/supergirl-heart-32x32.png" sizes="32x32" />
@@ -20,17 +20,30 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto" id="navigation">
-            {% for page in pages %}
-              <li class="active">
-                <a href="{{ output_filepath }}">{{ title|title }}</a>
-              </li>
-            {% endfor %}
+            
             </ul>
       </div>
     </nav>
-    {% block content %}
-      {{ content }}
-    {% endblock content %}
+    
+      <div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Thought Collector</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h2>{{blog_post_title}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p>{{blog_post_text}}</p>
+    </div>
+  </div>
+</div>
+
+    
     <div class="row">
       <div class="col">
         <div class="row">
