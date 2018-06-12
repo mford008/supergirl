@@ -20,10 +20,19 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto" id="navigation">
-            {% for page in pages %}
-              <li class="active">
-                <a href="{{ output_filepath }}">{{ title|title }}</a>
-              </li>
+            {% for page in files %}
+              {% if page['filename'] != "blog_post.md" %}
+                {% if page['title'] == title %}
+                <!-- if the current page is what I'm inserting into -->
+                  <li class="nav-item active">
+                    <a href="{{ page.output_filepath }}">{{ page.name|title }}</a>
+                  </li>
+                  {% else %}
+                  <li class="nav-item">
+                    <a href="{{ page.output_filepath }}">{{ page.name|title }}</a>
+                  </li>
+                {% endif %}
+              {% endif %}
             {% endfor %}
             </ul>
       </div>
