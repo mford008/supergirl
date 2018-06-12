@@ -6,12 +6,12 @@ import markdown
 pages = []
 landing = {
     'base': 'templates/base-landing.html',
-    'page': 'landing/index.html',
+    'page': 'landing/index.md',
+    'title': 'Maddy Ford'
 }
 
 def main():
     all_content_files = glob.glob('content/*.md')
-    landing_content_file = glob.glob(landing['page'])
     for page in all_content_files:
         file_name = os.path.basename(page)
         name_only, extension = os.path.splitext(file_name)
@@ -45,6 +45,26 @@ def convert(page):
     html = md.convert(md_content)
     return html
 
+def convert_landing(landing_content_file):
+    md = markdown.Markdown(extensions=["markdown.extensions.meta"])
+    md_content = open('landing/index.md').read()
+    html = md.convert(md_content)
+    return html
+
+def landing():
+    landing_content_file = glob.glob('landing/*.md')
+    for page in landing_content_file:
+        convert_landing(landing_content_file)
+        template_html_landing = open('templates/base-landing.html').read()
+        content = open('landing/index.md').read()
+        template = Template(template_html_landing)
+        finished_landing_page = template.render(
+            title = "Maddy Ford",
+            content = content,
+        )
+    open('docs/index.html', 'w+').write(finished_landing_page)
+
+landing()
 
 if __name__ == '__main__':
     main()
