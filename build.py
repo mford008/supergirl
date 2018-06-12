@@ -16,7 +16,7 @@ def main():
         file_name = os.path.basename(page)
         name_only, extension = os.path.splitext(file_name)
         convert(page)
-        append(file_name, name_only) #should I set this equal to a variable?
+        append(file_name, name_only)
     for page in pages:
         content_html = open(page['filepath']).read()
         template_html = open('templates/base.html').read()
@@ -25,7 +25,7 @@ def main():
             title = page['title'],
             content = content_html,
             filepath = page['output_filepath'],
-            files = pages #needs to equal the list above outside of the function
+            files = pages
         )
         open(page['output_filepath'], 'w+').write(finished_page)
 
@@ -35,6 +35,7 @@ def append(file_name, name_only):
         'filename': file_name,
         'name': name_only,
         'output_filepath': 'docs/'+str(name_only) + '.html',
+        'output_filename': str(name_only) + '.html',
         'title': 'Maddy Ford - ' + name_only,
     })
 

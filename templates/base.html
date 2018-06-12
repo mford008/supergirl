@@ -23,14 +23,15 @@
             {% for page in files %}
               {% if page['filename'] != "blog_post.md" %}
                 {% if page['title'] == title %}
-                <!-- if the current page is what I'm inserting into -->
-                  <li class="nav-item active">
-                    <a href="{{ page.output_filepath }}">{{ page.name|title }}</a>
+                  <li class="nav-link active">
+                    <a href="{{ page.output_filename }}">{{ page.name|title }}</a>
                   </li>
+                  <br>
                   {% else %}
-                  <li class="nav-item">
-                    <a href="{{ page.output_filepath }}">{{ page.name|title }}</a>
+                  <li class="nav-link">
+                    <a href="{{ page.output_filename }}">{{ page.name|title }}</a>
                   </li>
+                  <br>
                 {% endif %}
               {% endif %}
             {% endfor %}
