@@ -17,10 +17,7 @@ def main():
         name_only, extension = os.path.splitext(file_name)
         convert(page)
         append(file_name, name_only) #should I set this equal to a variable?
-        # print(var) #output None
-        # print(pages) #output type none
     for page in pages:
-        print(pages)
         content_html = open(page['filepath']).read()
         template_html = open('templates/base.html').read()
         template = Template(template_html)
@@ -36,6 +33,7 @@ def append(file_name, name_only):
     pages.append({
         'filepath': 'content/'+str(file_name),
         'filename': file_name,
+        'name': name_only,
         'output_filepath': 'docs/'+str(name_only) + '.html',
         'title': 'Maddy Ford - ' + name_only,
     })
