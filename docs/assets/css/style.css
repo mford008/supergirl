@@ -38,16 +38,14 @@ nav {
   color: #F76F9A;
   font-family: 'Hind', sans-serif;
 }
-
 a {
   color: #FFDAD8;
 }
 a:hover {
   color: #F76F9A;
 }
-a.active {
+li.active > a {
   color: #F76F9A;
-  background-color: #FFDAD8;
 }
 /*About Section*/
 img.biopic {
