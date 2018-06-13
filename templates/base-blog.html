@@ -1,6 +1,6 @@
 <!DOCTYPE html>
   <head>
-    <title>Maddy Ford - About</title>
+    <title>Maddy Ford - Blog</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="./assets/images/supergirl-heart-32x32.png" sizes="32x32" />
@@ -20,68 +20,25 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto" id="navigation">
-            
-              
-            
-              
-                
-                  <li class="nav-link">
-                    <a href="portfolio.html">Portfolio</a>
-                  </li>
-                
-              
-            
-              
-                
-                  <li class="nav-link">
-                    <a href="contact.html">Contact</a>
-                  </li>
-                
-              
-            
-              
-                
-                  <li class="nav-link">
-                    <a href="blog.html">Blog</a>
-                  </li>
-                
-              
-            
-              
-                
-                  <li class="nav-link active">
-                    <a href="about.html">About</a>
-                  </li>
-                
-              
-            
+              {% for page in files %}
+                {% if page['filename'] != "blog_post.md" %}
+                  {% if page['title'] == title %}
+                    <li class="nav-link active">
+                      <a href="{{ page.output_filename }}">{{ page.name|title }}</a>
+                    </li>
+                  {% else %}
+                    <li class="nav-link">
+                      <a href="{{ page.output_filename }}">{{ page.name|title }}</a>
+                    </li>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
             </ul>
       </div>
     </nav>
-    
-      <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-s-12 col-m-6 col-lg-6 greeting">
-      <h1>Hey, Hi, and Hello!</h1>
-    </div>
-    <div class="col-xs-8 col-s-8 col-m-4 col-lg-4 biopic-container">
-      <img class="img-fluid biopic" src="assets/images/biopic.jpg" alt="Maddy Ford Picture">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col bio-para-container">
-      <p>I am a full stack web developer based in Berkeley, California.
-         I am passionate about designing, developing, and testing high-quality
-         applications that facilitate efficiency in day-to-day processes. My
-         background in biology and nonprofit administration has infused my coding
-         style with a love for logic and user-focused design. I am relentlessly
-         compassionate and take great joy in collaborating with others on ambitious
-         full stack projects.</p>
-    </div>
-  </div>
-</div>
-
-    
+{% for page in blog_posts %}
+  <h2><a href="{{ page.filepath }}"></a>{{ page.title }}</h2>
+{% endfor %}
     <div class="row">
       <div class="col">
         <div class="row">

@@ -44,9 +44,8 @@ a {
 a:hover {
   color: #F76F9A;
 }
-a.active {
+li.active > a {
   color: #F76F9A;
-  /*background-color: #FFDAD8;*/
 }
 /*About Section*/
 img.biopic {
