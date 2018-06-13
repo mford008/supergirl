@@ -1,6 +1,3 @@
-data = '''
-title: Test 2
-'''
 <p>Shoober ur givin me a spook boof fat boi borking doggo borkdrive, blep very
 hand that feed shibe ur givin me a spook. Doge lotsa pats bork doge big ol,
 big ol pupper shibe maximum borkdrive. Smol borking doggo with a long snoot

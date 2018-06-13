@@ -1,6 +1,6 @@
 <!DOCTYPE html>
   <head>
-    <title>Maddy Ford - Blog post</title>
+    <title>Maddy Ford - Blog</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="./assets/images/supergirl-heart-32x32.png" sizes="32x32" />
@@ -20,49 +20,25 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto" id="navigation">
-                  <li class="nav-link">
-                    <a href="portfolio.html">Portfolio</a>
-                  </li>
-                  <li class="nav-link">
-                    <a href="contact.html">Contact</a>
-                  </li>
-                  <li class="nav-link">
-                    <a href="blog.html">Blog</a>
-                  </li>
-                  <li class="nav-link">
-                    <a href="about.html">About</a>
-                  </li>
+              {% for page in files %}
+                {% if page['filename'] != "blog_post.md" %}
+                  {% if page['title'] == title %}
+                    <li class="nav-link active">
+                      <a href="{{ page.output_filename }}">{{ page.name|title }}</a>
+                    </li>
+                  {% else %}
+                    <li class="nav-link">
+                      <a href="{{ page.output_filename }}">{{ page.name|title }}</a>
+                    </li>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
             </ul>
       </div>
     </nav>
-      <div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>Thought Collector</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <h2></h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      
-        data = '''
-title: Test 2
-'''
-<p>Shoober ur givin me a spook boof fat boi borking doggo borkdrive, blep very
-hand that feed shibe ur givin me a spook. Doge lotsa pats bork doge big ol,
-big ol pupper shibe maximum borkdrive. Smol borking doggo with a long snoot
-for pats waggy wags borkdrive shoober aqua doggo, many pats wrinkler. Mlem I
-am bekom fat porgo shoober ur givin me a spook much ruin diet, puggo very
-good spot shibe. Thicc mlem heckin good boys, you are doing me a frighten.</p>
-
-      
-    </div>
-  </div>
-</div>
+{% for page in blog_posts %}
+  <h2><a href="{{ page.filepath }}"></a>{{ page.title }}</h2>
+{% endfor %}
     <div class="row">
       <div class="col">
         <div class="row">

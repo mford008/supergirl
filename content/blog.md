@@ -7,17 +7,7 @@
   </div>
   <div class="row">
     <div class="col">
-      <h2><a href="{{blog_post_output_filepath}}">{{test_one}}</a></h2>
-      <h3>{{date_one}}</h3>
-      <h2><a href="{{blog_post_output_filepath}}">{{test_two}}</a></h2>
-      <h3>{{date_two}}</h3>
-      <h2><a href="{{blog_post_output_filepath}}">{{test_three}}</a></h2>
-      <h3>{{date_three}}</h3>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <p>{{blog_text}}</p>
+    
     </div>
   </div>
 </div>

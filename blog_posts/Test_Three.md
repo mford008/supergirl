@@ -1,6 +1,3 @@
-data = '''
-title: Test 3
-'''
 <p>The neighborhood pupper I am bekom fat many pats heckin good boys shibe, what
 a nice floof heckin very jealous pupper. long bois shibe. yapper ruff. Very
 jealous pupper many pats yapper heckin good boys blep, big ol pupper much ruin
