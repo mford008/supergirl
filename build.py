@@ -47,20 +47,23 @@ def blog_append(file_name, name_only):
         'name': name_only,
         'output_filepath': 'docs/'+str(name_only) + '.html',
         'output_filename': str(name_only) + '.html',
-        'title': 'Maddy Ford - Blog',
+        # 'title': post_title,
     })
 
 def convert(page):
     md = markdown.Markdown(extensions=["markdown.extensions.meta"])
     md_content = open(page).read()
     html = md.convert(md_content)
+    # post_title = md.Meta['title'][0]
     return html
+    # return post_title
 
 def convert_landing(landing_content_file):
     md = markdown.Markdown(extensions=["markdown.extensions.meta"])
     md_content = open('landing/index.md').read()
     html = md.convert(md_content)
     return html
+
 
 def landing():
     landing_content_file = glob.glob('landing/*.md')
@@ -88,10 +91,10 @@ def compile_blog_posts():
         blog_append(file_name, name_only)
     for page in blog_posts:
         content_html = open(page['filepath']).read()
-        template_html = open('templates/base.html').read()
+        template_html = open('templates/base-blog-posts.html').read()
         template = Template(template_html)
         finished_blog_page = template.render(
-            title = page['title'],
+            # title = post_title,
             content = content_html,
             filepath = page['output_filepath'],
         )
